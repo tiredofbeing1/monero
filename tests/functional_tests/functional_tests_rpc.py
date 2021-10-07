@@ -44,7 +44,8 @@ N_MONERODS = 4
 N_WALLETS = 5
 
 WALLET_DIRECTORY = builddir + "/functional-tests-directory"
-DIFFICULTY = 10
+#DIFFICULTY = 10
+DIFFICULTY = 1
 
 monerod_base = [builddir + "/bin/monerod", "--regtest", "--fixed-difficulty", str(DIFFICULTY), "--no-igd", "--p2p-bind-port", "monerod_p2p_port", "--rpc-bind-port", "monerod_rpc_port", "--zmq-rpc-bind-port", "monerod_zmq_port", "--non-interactive", "--disable-dns-checkpoints", "--check-updates", "disabled", "--rpc-ssl", "disabled", "--data-dir", "monerod_data_dir", "--log-level", "1"]
 monerod_extra = [
