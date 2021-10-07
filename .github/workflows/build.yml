@@ -49,4 +49,5 @@ jobs:
         ${{env.BUILD_DEFAULT_LINUX}}
         mkdir -p build/tests/functional_tests
         mkdir -p build/functional-tests-directory
-        python `realpath tests/functional_tests/functional_tests_rpc.py` /usr/bin/python `realpath tests/functional_tests` `realpath build` mining
+        for _ in $(seq 1 10); do python `realpath tests/functional_tests/functional_tests_rpc.py` /usr/bin/python `realpath tests/functional_tests` `realpath build` mining; done;
+        tail -n '+0' build/tests/functional_tests/*.log
