@@ -47,4 +47,4 @@ jobs:
       run: |
         ${{env.CCACHE_SETTINGS}}
         ${{env.BUILD_DEFAULT_LINUX}}
-        python tests/functional_tests/functional_tests_rpc.py /usr/bin/python `realpath tests/functional_tests` `realpath build` mining
+        python `realpath tests/functional_tests/functional_tests_rpc.py` /usr/bin/python `realpath tests/functional_tests` `realpath build` mining
